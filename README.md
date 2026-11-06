@@ -43,14 +43,14 @@ Este projeto tem como objetivo demonstrar a utilização da linguagem **Python**
 #### 1. Clonar o repositório
 
 ```bash
-git clone https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git
-cd SEU_REPOSITORIO
+git clone https://github.com/alvesvslucas/Trabalho-Pratico-DGT2823.git
+cd Trabalho-Pratico-DGT2823
 ```
 
 #### 2. Instalar a biblioteca necessária
 
 ```bash
-pip install pandas
+python -m pip install pandas
 ```
 
 #### 3. Executar o script Python
@@ -60,6 +60,8 @@ python trabalho_bigdata.py
 ```
 
 ---
+
+Execute na raiz: o script abre `dados_academia.csv` por caminho relativo, com separador `;`. A versão de Pandas não está fixada em um manifesto de dependências.
 
 ### 📊 Descrição do Dataset
 
@@ -89,14 +91,11 @@ O dataset refere-se ao registro de atividades físicas, contendo as colunas:
 
 ---
 
-### 📑 Resultados
+### 📑 Saída e validação
 
-Ao final do script, os dados estão:
+O script imprime os dados e suas etapas de tratamento no terminal; não salva um CSV de saída. Aplica preenchimento de `Calories`, conversão de `Date` e remoção de datas nulas.
 
-- Sem valores nulos na coluna `Calories`;
-- Com formato de data padronizado (`datetime`);
-- Sem registros inválidos;
-- Prontos para análises futuras e aplicações em Big Data.
+A correção de datas deve ser conferida na saída: valores convertidos para `NaT` podem perder o texto original antes da tentativa de corrigir `20201226`. Esta revisão documental não executou o script nem confirmou os resultados do tratamento.
 
 ---
 
